@@ -1,0 +1,29 @@
+{
+  "name": "@debonet/es6condition",
+  "version": "1.0.1",
+  "description": "Simple, clean, Promise-based event synchronization Condition Variable library",
+  "main": "src/es6condition.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/debonet/es6condition.git"
+  },
+  "keywords": [
+    "Condition Variable",
+    "Promises",
+    "simple",
+    "clean",
+    "dependency-free"
+  ],
+  "author": "Jeremy De Bonet",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/debonet/es6condition/issues"
+  },
+  "homepage": "https://github.com/debonet/es6condition#readme",
+  "devDependencies": {
+    "jest": "^26.6.3"
+  }
+}
