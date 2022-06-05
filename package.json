@@ -1,6 +1,6 @@
 {
   "name": "@debonet/es6condition",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple, clean, Promise-based event synchronization Condition Variable library",
   "main": "src/es6condition.js",
   "scripts": {

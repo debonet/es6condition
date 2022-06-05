@@ -23,7 +23,9 @@ module.exports = class Condition {
 	// signal / release
 	fRelease() {
 		let f = this.#vf.shift();
-		setImmediate( f );
+		if ( f ){
+			setImmediate( f );
+		}
 	}
 	release = this.fRelease;
 	fSignal = this.fRelease;
