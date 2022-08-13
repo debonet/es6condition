@@ -44,7 +44,7 @@ and generate an output:
 
 ### broadcast
 
-`broadcast()` releases the first event that is waiting on the Condition. Here's an example:
+`broadcast()` releases the all events that are waiting on the Condition. Here's an example:
 
 
 ```javascript

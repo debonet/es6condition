@@ -1,4 +1,4 @@
-module.exports = class Condition {
+class Condition {
 	// ----------------------------------------------------
 	// private members
 	#vf = [];	
@@ -11,13 +11,11 @@ module.exports = class Condition {
 			self.#vf.push( fOk );
 		});
 	}
-	wait = this.fpWait;
 
 	// ----------------------------------------------------
 	fcWaiting(){
 		return this.#vf.length;
 	}
-	waiting = this.fcWaiting;
 	
 	// ----------------------------------------------------
 	// signal / release
@@ -27,9 +25,6 @@ module.exports = class Condition {
 			setImmediate( f );
 		}
 	}
-	release = this.fRelease;
-	fSignal = this.fRelease;
-	signal = this.fRelease;
 
 	// ----------------------------------------------------
 	// broadcast / signalAll / releaseAll
@@ -39,11 +34,22 @@ module.exports = class Condition {
 		}
 		this.#vf = [];
 	}
-	releaseAll = this.fReleaseAll;
-	fBroadcast = this.fReleaseAll;
-	broadcast = this.fReleaseAll;
-	fSignalAll = this.fReleaseAll;
-	signalAll = this.fReleaseAll;
-
 }
 
+// aliases
+Condition.prototype.wait = Condition.prototype.fpWait;
+
+Condition.prototype.waiting = Condition.prototype.fcWaiting;
+
+Condition.prototype.release = Condition.prototype.fRelease;
+Condition.prototype.fSignal = Condition.prototype.fRelease;
+Condition.prototype.signal = Condition.prototype.fRelease;
+
+Condition.prototype.releaseAll = Condition.prototype.fReleaseAll;
+Condition.prototype.fBroadcast = Condition.prototype.fReleaseAll;
+Condition.prototype.broadcast = Condition.prototype.fReleaseAll;
+Condition.prototype.fSignalAll = Condition.prototype.fReleaseAll;
+Condition.prototype.signalAll = Condition.prototype.fReleaseAll;
+
+
+module.exports = Condition;
